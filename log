@@ -106,3 +106,13 @@ heap.c:42:22: error: expected expression before ‘)’ token
       |                      ^
 Compilation failed
 e7a711e
+Wed 27 Sep 2023 02:36:08 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:42:5: error: conversion to non-scalar type requested
+   42 |     pq->heapArray = (heapElem) realloc (pq->heapArray, pq->capac * sizeof(heapElem));
+      |     ^~
+Compilation failed
+d4699ab
