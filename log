@@ -13,3 +13,14 @@ heap.c:43:39: error: expected expression before ‘)’ token
       |                                       ^
 Compilation failed
 eaf4167
+Wed 27 Sep 2023 01:51:29 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:43:55: error: ‘*nuevoHeap.capac’ may be used uninitialized [-Werror=maybe-uninitialized]
+   43 |   nuevoHeap->heapArray = (heapElem*) malloc (nuevoHeap->capac * sizeof(heapElem));
+      |                                              ~~~~~~~~~^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+49334f7
