@@ -1,0 +1,15 @@
+Wed 27 Sep 2023 01:50:53 AM UTC: 
+ heap.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:43:27: error: ‘heapElement’ undeclared (first use in this function); did you mean ‘heapElem’?
+   43 |   nuevoHeap->heapArray = (heapElement*) malloc (nuevoHeap->capac * sizeof(heapElement));
+      |                           ^~~~~~~~~~~
+      |                           heapElem
+heap.c:43:27: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:43:39: error: expected expression before ‘)’ token
+   43 |   nuevoHeap->heapArray = (heapElement*) malloc (nuevoHeap->capac * sizeof(heapElement));
+      |                                       ^
+Compilation failed
+eaf4167
