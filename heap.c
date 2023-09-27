@@ -29,8 +29,20 @@ void* heap_top(Heap* pq)
 
 
 
-void heap_push(Heap* pq, void* data, int priority){
+void heap_push(Heap* pq, void* data, int priority)
+{
+  if (pq == NULL)
+  {
+    return;
+  }
 
+  heapElem nuevoElem;
+  nuevoElem.data = data;
+  nuevoElem.priority = priority;
+
+  int indice = pq->size;
+  pq->heapArray[indice] = nuevoElem;
+  pq->size++;
 }
 
 
