@@ -160,3 +160,17 @@ heap.c:89:11: error: unused variable ‘hijoDerecho’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 0e92658
+Wed 27 Sep 2023 03:10:02 AM UTC: 
+ heap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:92:25: error: comparisons like ‘X<=Y<=Z’ do not have their mathematical meaning [-Werror=parentheses]
+   92 |       if (hijoIzquierdo < pq->heapArray[hijoIzquierdo].priority < pq->heapArray[menorPrioridad].priority)
+      |           ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+heap.c:96:23: error: comparisons like ‘X<=Y<=Z’ do not have their mathematical meaning [-Werror=parentheses]
+   96 |       if (hijoDerecho < pq->heapArray[hijoDerecho].priority < pq->heapArray[menorPrioridad].priority)
+      |           ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7e84ef9

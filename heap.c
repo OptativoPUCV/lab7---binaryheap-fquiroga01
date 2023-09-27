@@ -93,6 +93,10 @@ void heap_pop(Heap* pq)
       {
         menorPrioridad = hijoIzquierdo;
       }
+      if (hijoDerecho < pq->heapArray[hijoDerecho].priority < pq->heapArray[menorPrioridad].priority)
+      {
+        menorPrioridad = hijoDerecho;
+      }
     }
 }
 
