@@ -186,3 +186,17 @@ Wed 27 Sep 2023 03:29:22 AM UTC:
  tests:  7|1
 total_score: 45/70
 4d234ad
+Wed 27 Sep 2023 03:35:38 AM UTC: 
+ heap.c | 26 +++++++++++++-------------
+ 1 file changed, 13 insertions(+), 13 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:88:112: error: request for member ‘priority’ in something not a structure or union
+   88 |       if (indiceHijoDerecho < pq->size && pq->heapArray[indiceHijoDerecho].priority < pq->heapArray[indiceMayor.priority)
+      |                                                                                                                ^
+heap.c:88:121: error: expected ‘]’ before ‘)’ token
+   88 |       if (indiceHijoDerecho < pq->size && pq->heapArray[indiceHijoDerecho].priority < pq->heapArray[indiceMayor.priority)
+      |                                                                                                                         ^
+      |                                                                                                                         ]
+Compilation failed
+ed33fb9

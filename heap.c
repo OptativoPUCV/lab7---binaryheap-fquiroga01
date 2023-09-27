@@ -74,27 +74,27 @@ void heap_pop(Heap* pq)
   pq->heapArray[0] = pq->heapArray[pq->size - 1];
   pq->size--;
 
-  int indice = 0;
+  int indiceActual = 0;
+  int indiceHijoIzquierdo = 2 * indiceActual + 1;
+  int indiceHijoDerecho = 2 * indiceActual + 2;
   while (1)
     {
-      int hijoIzquierdo = 2 * indice + 1;
-      int hijoDerecho = 2 * indice + 2;
-      int menorPrioridad = indice;
+      int indiceMayor = indiceActual;
 
-      if (hijoIzquierdo < pq->size && pq->heapArray[hijoIzquierdo].priority < pq->heapArray[menorPrioridad].priority)
+      if (indiceHijoIzquierdo < pq->size && pq->heapArray[indiceHijoIzquierdo].priority < pq->heapArray[indiceMayor].priority)
       {
-        menorPrioridad = hijoIzquierdo;
+        indiceMayor = indiceHijoIzquierdo;
       }
-      if (hijoDerecho < pq->size && pq->heapArray[hijoDerecho].priority < pq->heapArray[menorPrioridad].priority)
+      if (indiceHijoDerecho < pq->size && pq->heapArray[indiceHijoDerecho].priority < pq->heapArray[indiceMayor.priority)
       {
-        menorPrioridad = hijoDerecho;
+        indiceMayor = indiceHijoDerecho;
       }
-      if (menorPrioridad != indice)
+      if (indiceMayor != indiceActual)
       {
-        heapElem temporal = pq->heapArray[indice];
-        pq->heapArray[indice] = pq->heapArray[menorPrioridad];
-        pq->heapArray[menorPrioridad] = temporal;
-        indice = menorPrioridad;
+        heapElem temporal = pq->heapArray[indiceActual];
+        pq->heapArray[indiceActual] = pq->heapArray[indiceMayor];
+        pq->heapArray[indiceMayor] = temporal;
+        indiceActual = indiceMayor;
       }
       else
       {
