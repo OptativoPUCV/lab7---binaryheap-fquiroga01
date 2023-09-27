@@ -40,6 +40,10 @@ void heap_push(Heap* pq, void* data, int priority)
   {
     pq->capac = pq->capac * 2;
     pq->heapArray = (heapElem *) realloc (pq->heapArray, pq->capac * sizeof(heapElem));
+    if (pq->heapArray == NULL)
+    {
+      return;
+    }
   }
 
   heapElem nuevoElem;
