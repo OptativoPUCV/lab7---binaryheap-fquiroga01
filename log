@@ -66,3 +66,17 @@ Wed 27 Sep 2023 02:22:37 AM UTC:
  tests:  3|2
 total_score: 25/70
 1437ee1
+Wed 27 Sep 2023 02:28:42 AM UTC: 
+ heap.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:49:56: error: ‘indicePadre’ undeclared (first use in this function)
+   49 |     if (pq->heapArray[indice].priority < pq->heapArray[indicePadre].priority)
+      |                                                        ^~~~~~~~~~~
+heap.c:49:56: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:52:20: error: array subscript is not an integer
+   52 |       pq->heapArray[index] = pq->heapArray[indicePadre];
+      |                    ^
+Compilation failed
+b2295c6
