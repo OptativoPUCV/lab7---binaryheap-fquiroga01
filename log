@@ -90,3 +90,9 @@ heap.c:53:20: error: array subscript is not an integer
       |                    ^
 Compilation failed
 631198e
+Wed 27 Sep 2023 02:29:32 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|2
+total_score: 25/70
+3db0187
