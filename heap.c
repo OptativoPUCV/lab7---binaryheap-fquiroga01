@@ -85,21 +85,20 @@ void heap_pop(Heap* pq)
       {
         indiceMayor = indiceHijoIzquierdo;
       }
-      if (indiceHijoDerecho < pq->size && pq->heapArray[indiceHijoDerecho].priority < pq->heapArray[indiceMayor].priority)
+      if (indiceHijoDerecho < pq->size && pq->heapArray[indiceHijoDerecho].priority > pq->heapArray[indiceMayor].priority)
       {
         indiceMayor = indiceHijoDerecho;
       }
-      if (indiceMayor != indiceActual)
-      {
-        heapElem temporal = pq->heapArray[indiceActual];
-        pq->heapArray[indiceActual] = pq->heapArray[indiceMayor];
-        pq->heapArray[indiceMayor] = temporal;
-        indiceActual = indiceMayor;
-      }
-      else
+      if (indiceMayor == indiceActual)
       {
         break;
       }
+      heapElem temporal = pq->heapArray[indiceActual];
+      pq->heapArray[indiceActual] = pq->heapArray[indiceMayor];
+      pq->heapArray[indiceMayor] = temporal;
+      indiceActual = indiceMayor;
+      indiceHijoIzquierdo = 2 * indiceActual + 1;
+      indiceHijoDerecho = 2 * indiceActual + 2;
     }
 }
 
