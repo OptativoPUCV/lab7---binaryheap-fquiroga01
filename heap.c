@@ -46,6 +46,7 @@ void heap_push(Heap* pq, void* data, int priority)
 
   while (indice > 0)
   {
+    int indicePadre = (indice - 1);
     if (pq->heapArray[indice].priority < pq->heapArray[indicePadre].priority)
     {
       heapElem temporal = pq->heapArray[indice];
