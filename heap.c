@@ -40,6 +40,7 @@ Heap* createHeap()
     return NULL;
   }
 
+  nuevoHeap->capac = 3;
   nuevoHeap->heapArray = (heapElem*) malloc (nuevoHeap->capac * sizeof(heapElem));
   if (nuevoHeap->heapArray == NULL)
   {

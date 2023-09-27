@@ -24,3 +24,9 @@ heap.c:43:55: error: ‘*nuevoHeap.capac’ may be used uninitialized [-Werror=m
 cc1: all warnings being treated as errors
 Compilation failed
 49334f7
+Wed 27 Sep 2023 01:52:29 AM UTC: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  1|3
+total_score: 10/70
+e3d865c
