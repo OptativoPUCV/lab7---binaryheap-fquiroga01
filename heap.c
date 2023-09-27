@@ -89,13 +89,24 @@ void heap_pop(Heap* pq)
       int hijoDerecho = 2 * indice + 2;
       int menorPrioridad = indice;
 
-      if (hijoIzquierdo < pq->heapArray[hijoIzquierdo].priority < pq->heapArray[menorPrioridad].priority)
+      if (hijoIzquierdo < pq->size && pq->heapArray[hijoIzquierdo].priority < pq->heapArray[menorPrioridad].priority)
       {
         menorPrioridad = hijoIzquierdo;
       }
-      if (hijoDerecho < pq->heapArray[hijoDerecho].priority < pq->heapArray[menorPrioridad].priority)
+      if (hijoDerecho < pq->size && pq->heapArray[hijoDerecho].priority < pq->heapArray[menorPrioridad].priority)
       {
         menorPrioridad = hijoDerecho;
+      }
+      if (menorPrioridad != indice)
+      {
+        heapElem temporal = pq->heapArray[indice];
+        pq->heapArray[indice] = pq->heapArray[menorPrioridad];
+        pq->heapArray[menorPrioridad] = temporal;
+        indice = menorPrioridad;
+      }
+      else
+      {
+        break;
       }
     }
 }
