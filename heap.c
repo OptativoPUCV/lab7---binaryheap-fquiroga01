@@ -81,6 +81,19 @@ void heap_pop(Heap* pq)
 
   pq->heapArray[0] = pq->heapArray[pq->size - 1];
   pq->size--;
+
+  int indice = 0;
+  while (1)
+    {
+      int hijoIzquierdo = 2 * indice + 1;
+      int hijoDerecho = 2 * indice + 2;
+      int menorPrioridad = indice;
+
+      if (hijoIzquierdo < pq->heapArray[hijoIzquierdo].priority < pq->heapArray[menorPrioridad].priority)
+      {
+        menorPrioridad = hijoIzquierdo;
+      }
+    }
 }
 
 Heap* createHeap()
