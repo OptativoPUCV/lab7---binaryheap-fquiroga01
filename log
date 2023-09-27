@@ -116,3 +116,9 @@ heap.c:42:5: error: conversion to non-scalar type requested
       |     ^~
 Compilation failed
 d4699ab
+Wed 27 Sep 2023 02:36:20 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|2
+total_score: 25/70
+62480ec
